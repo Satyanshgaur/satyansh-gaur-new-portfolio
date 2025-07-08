@@ -3,7 +3,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/6f618c92-0240-47ca-a73a-09c7e0e82aa0
+**URL**: https://satyansh-gaur-new-portfolio.vercel.app/
 
 
 ## What technologies are used for this project?
