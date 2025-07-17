@@ -5,6 +5,28 @@ import { BlogPreview } from '../components/BlogPreview';
 
 const Blog = () => {
   const blogPosts = [
+     {
+
+
+      title: 'CPP: level zero',
+
+
+      excerpt: 'A comprehensive beginner\'s guide to C++ programming fundamentals. Covering essential libraries, operators, data structures, and modern C++ features with practical examples and code snippets.',
+
+
+      date: 'Jan 20, 2025',
+
+
+      readTime: '8 min read',
+
+
+      tags: ['C++', 'Programming', 'Basics', 'Learning'],
+
+
+      slug: 'cpp-level-zero',
+
+
+    },
     {
       
       title: 'Building My Portfolio: A Developer\'s Journey',
@@ -56,7 +78,7 @@ const Blog = () => {
     },
   ];
 
-  const tags = ['All', 'Web Development', 'Machine Learning', 'Blockchain', 'Career', 'Learning'];
+  const tags = ['All', 'Web Development','c++', 'Machine Learning', 'Blockchain', 'Career', 'Learning'];
   const [selectedTag, setSelectedTag] = React.useState('All');
 
   const filteredPosts = selectedTag === 'All'
