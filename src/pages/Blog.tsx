@@ -14,7 +14,7 @@ const Blog = () => {
       excerpt: 'A comprehensive beginner\'s guide to C++ programming fundamentals. Covering essential libraries, operators, data structures, and modern C++ features with practical examples and code snippets.',
 
 
-      date: 'Jan 20, 2025',
+      date: 'July 17, 2025',
 
 
       readTime: '8 min read',
