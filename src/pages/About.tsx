@@ -58,8 +58,8 @@ const About = () => {
                   I'm always eager to learn and implement new technologies.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  When I'm not coding, you'll find me gaming, listening to music, or exploring
-                  the latest tech trends. I believe in learning by doing and sharing knowledge
+                  When I'm not coding, you'll find me reading, writing, or exploring philosophy,
+                  psychology, theology or tech. This site is made to sharw my knowledge
                   with the community through my blog and open-source contributions.
                 </p>
               </div>
