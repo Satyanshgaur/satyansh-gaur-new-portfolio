@@ -11,6 +11,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import CppLevelZero from "./pages/blog/cpplevelzero";
+import CppVectors from "./pages/blog/Vectorsincpp";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/cpp-level-zero" element={<CppLevelZero />} />
+          <Route path="/blog/vectors-in-cpp" element={<CppVectors />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

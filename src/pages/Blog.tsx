@@ -5,27 +5,23 @@ import { BlogPreview } from '../components/BlogPreview';
 
 const Blog = () => {
   const blogPosts = [
+    {
+      title: 'Vectors in C++: Dynamic Arrays Made Easy',
+      excerpt: 'A comprehensive guide to understanding and using vectors in C++. Learn about dynamic arrays, memory management, and practical examples.',
+      date: 'July 30, 2025',
+      readTime: '12 min read',
+      tags: ['C++', 'Programming', 'Basics', 'Learning'],
+      slug: 'vectors-in-cpp',
+    },
      {
 
 
       title: 'CPP: level zero',
-
-
       excerpt: 'A comprehensive beginner\'s guide to C++ programming fundamentals. Covering essential libraries, operators, data structures, and modern C++ features with practical examples and code snippets.',
-
-
       date: 'July 17, 2025',
-
-
       readTime: '8 min read',
-
-
       tags: ['C++', 'Programming', 'Basics', 'Learning'],
-
-
       slug: 'cpp-level-zero',
-
-
     },
     {
       
