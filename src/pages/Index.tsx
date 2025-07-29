@@ -40,22 +40,23 @@ const Index = () => {
   ];
 
   const recentPosts = [
-    {
-      title: 'Building My Portfolio: A Developer\'s Journey',
-      excerpt: 'Exploring the process of creating a modern portfolio website, from design decisions to technical implementation.',
-      date: 'Jan 15, 2025',
-      readTime: '5 min read',
-      tags: ['Web Development', 'Portfolio', 'React'],
-      slug: 'building-my-portfolio',
-    },
-    {
-      title: 'Learning Machine Learning: My 2025 Roadmap',
-      excerpt: 'Sharing my structured approach to learning ML fundamentals, from Python basics to building real projects.',
-      date: 'Jan 10, 2025',
+     {
+      title: 'CPP: level zero',
+      excerpt: 'A comprehensive beginner\'s guide to C++ programming fundamentals. Covering essential libraries, operators, data structures, and modern C++ features with practical examples and code snippets.',
+      date: 'Jan 20, 2025',
       readTime: '8 min read',
-      tags: ['Machine Learning', 'Python', 'Learning'],
-      slug: 'ml-learning-roadmap',
+      tags: ['C++', 'Programming', 'Basics', 'Learning'],
+      slug: 'cpp-level-zero',
     },
+    {
+      title: 'Vectors in C++: Dynamic Arrays Made Easy',
+      excerpt: 'A comprehensive guide to understanding and using vectors in C++. Learn about dynamic arrays, memory management, and practical examples.',
+      date: 'July 30, 2025',
+      readTime: '2 min read',
+      tags: ['C++', 'Programming', 'Basics', 'Learning'],
+      slug: 'vectors-in-cpp',
+    },
+    
   ];
 
   return (

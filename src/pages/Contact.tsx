@@ -39,148 +39,67 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="animate-slide-up">
-              <h2 className="text-2xl font-semibold mb-8">Get In Touch</h2>
-              
-              <div className="space-y-6 mb-8">
-                <div className="flex items-center space-x-4 p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <a
-                      href="mailto:satyanshgaur1@gmail.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      satyanshgaur1@gmail.com
-                    </a>
-                  </div>
+          {/* Contact Information */}
+          <div className="max-w-2xl mx-auto animate-slide-up">
+            <h2 className="text-2xl font-semibold mb-8 text-center">Get In Touch</h2>
+            
+            <div className="space-y-6 mb-8">
+              <div className="flex items-center space-x-4 p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-primary" />
                 </div>
-
-                <div className="flex items-center space-x-4 p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Github className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">GitHub</h3>
-                    <a
-                      href="https://github.com/satyanshgaur"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      @satyanshgaur
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Linkedin className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">LinkedIn</h3>
-                    <a
-                      href="https://www.linkedin.com/in/satyansh-gaur-2b1b05370"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      /in/satyansh-gaur-2b1b05370
-                    </a>
-                  </div>
+                <div>
+                  <h3 className="font-medium">Email</h3>
+                  <a
+                    href="mailto:satyanshgaur1@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    satyanshgaur1@gmail.com
+                  </a>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-lg p-6 border border-primary/20">
-                <h3 className="font-semibold mb-2">Quick Response</h3>
-                <p className="text-muted-foreground text-sm">
-                  I typically respond to emails within 24-48 hours. For urgent matters,
-                  feel free to reach out on LinkedIn.
-                </p>
+              <div className="flex items-center space-x-4 p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Github className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium">GitHub</h3>
+                  <a
+                    href="https://github.com/satyanshgaur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    @satyanshgaur
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Linkedin className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium">LinkedIn</h3>
+                  <a
+                    href="https://www.linkedin.com/in/satyansh-gaur-2b1b05370"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    /in/satyansh-gaur-2b1b05370
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="animate-slide-up animate-delay-100">
-              <h2 className="text-2xl font-semibold mb-8">Send a Message</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors"
-                    placeholder="What's this about?"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors resize-none"
-                    placeholder="Tell me about your project, idea, or just say hello!"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium glow-effect"
-                >
-                  Send Message
-                </button>
-              </form>
+            <div className="bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-lg p-6 border border-primary/20 text-center">
+              <h3 className="font-semibold mb-2">Quick Response</h3>
+              <p className="text-muted-foreground text-sm">
+                I typically respond to emails within 24-48 hours. For urgent matters,
+                feel free to reach out on LinkedIn.
+              </p>
             </div>
           </div>
         </div>
