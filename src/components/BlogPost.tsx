@@ -20,7 +20,7 @@ interface BlogPostProps {
 
 export const BlogPost = ({ title, date, readTime, tags, description, slug, children }: BlogPostProps) => {
   const metaDescription = description || `${title} - A blog post about ${tags.join(', ')}`;
-  const canonicalUrl = `https://yoursite.com/blog/${slug}`;
+  const canonicalUrl = `https://satyanshgaur.vercel.app/blog/${slug}`;
 
   return (
     <Layout>
