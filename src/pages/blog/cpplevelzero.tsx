@@ -11,6 +11,10 @@ const CppLevelZero = () => {
       date="Jan 20, 2025"
       readTime="8 min read"
       tags={['C++', 'Programming', 'Basics', 'Learning']}
+
+      slug ="cpp-level-zero"
+
+      description ="A comprehensive cheat sheet covering essential C++ concepts for beginners."
     >
       <div className="space-y-8">
         <h3 className="text-2xl font-semibold mb-4">1. Common Libraries</h3>

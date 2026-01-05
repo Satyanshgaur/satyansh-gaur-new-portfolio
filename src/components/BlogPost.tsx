@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Helmet } from 'react-helmet-async';
+
 import { Layout } from './Layout';
 
 import { Link } from 'react-router-dom';
@@ -11,11 +13,37 @@ interface BlogPostProps {
   date: string;
   readTime: string;
   tags: string[];
+  description?: string;
+  slug: string;
   children: React.ReactNode;
 }
-export const BlogPost = ({ title, date, readTime, tags, children }: BlogPostProps) => {
+
+export const BlogPost = ({ title, date, readTime, tags, description, slug, children }: BlogPostProps) => {
+  const metaDescription = description || `${title} - A blog post about ${tags.join(', ')}`;
+  const canonicalUrl = `https://yoursite.com/blog/${slug}`;
+
   return (
     <Layout>
+      <Helmet>
+        <title>{title} | Your Blog</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={metaDescription} />
+        
+        {/* Article specific */}
+        <meta property="article:published_time" content={date} />
+        <meta property="article:tag" content={tags.join(', ')} />
+      </Helmet>
       <div className="pt-24 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
           {/* Back to Blog */}
@@ -26,9 +54,11 @@ export const BlogPost = ({ title, date, readTime, tags, children }: BlogPostProp
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
           </Link>
+
           {/* Header */}
           <header className="mb-12 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">{title}</h1>
+            
             <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-6">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -39,6 +69,7 @@ export const BlogPost = ({ title, date, readTime, tags, children }: BlogPostProp
                 <span>{readTime}</span>
               </div>
             </div>
+
             <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <span
@@ -50,6 +81,7 @@ export const BlogPost = ({ title, date, readTime, tags, children }: BlogPostProp
               ))}
             </div>
           </header>
+
           {/* Content */}
           <article className="prose prose-lg max-w-none animate-slide-up">
             {children}

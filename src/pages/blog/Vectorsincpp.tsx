@@ -28,6 +28,10 @@ const CppVectors = () => {
 
       tags={['C++', 'Programming', 'Basics', 'Learning']}
 
+      slug ="vectors-in-cpp"
+
+      description ="A comprehensive guide to C++ vectors, covering declaration, common functions, traversal, sorting, and real-world usage."
+
 
     >
 
